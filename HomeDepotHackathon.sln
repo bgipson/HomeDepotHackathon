@@ -1,7 +1,7 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2015
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeDepotHackathon.CSharp", "HomeDepotHackathon.CSharp.csproj", "{A3DF1D70-5F82-2215-4421-DC066AD455E7}"
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeDepotHackathon", "Assembly-CSharp.csproj", "{4AC67FC0-B8AF-6EA2-4749-EAF64291A1F0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,12 +9,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{A3DF1D70-5F82-2215-4421-DC066AD455E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A3DF1D70-5F82-2215-4421-DC066AD455E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A3DF1D70-5F82-2215-4421-DC066AD455E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A3DF1D70-5F82-2215-4421-DC066AD455E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4AC67FC0-B8AF-6EA2-4749-EAF64291A1F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4AC67FC0-B8AF-6EA2-4749-EAF64291A1F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4AC67FC0-B8AF-6EA2-4749-EAF64291A1F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4AC67FC0-B8AF-6EA2-4749-EAF64291A1F0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
 	EndGlobalSection
 EndGlobal
