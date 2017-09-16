@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using WebCamTexture;
 
 public class ImageProcessing : MonoBehaviour {
 
@@ -18,12 +19,12 @@ public class ImageProcessing : MonoBehaviour {
 	**/
 	void Scrub() {
 		//create array and get the pixels
-		Color[] pix = getPixels();
+		Color[] pix = GetPixels();
 		int n = 0;
 		//iterate over the array
-		while (n < pix.length)
+		while (n < pix.Length)
 		{
-			int y = 0;
+			double y = 0;
 			//grayscale formula
 			y = (pix[n].r * 0.21) + (pix[n].g * 0.72) + (pix[n].b * 0.07);
 			//check if pixel is white
@@ -34,7 +35,7 @@ public class ImageProcessing : MonoBehaviour {
 			}
 			//if not white change to black
 			else {
-				pix[n] = new Color.black;			
+				pix[n] = Color.black;			
 			}
 			//add to n to move to next pixel
 			n++; 
