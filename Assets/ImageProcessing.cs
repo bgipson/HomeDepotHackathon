@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using WebCamTexture;
 
 public class ImageProcessing : MonoBehaviour {
 
@@ -17,28 +16,31 @@ public class ImageProcessing : MonoBehaviour {
 	/**
 	Scrub funtion to scrub the white backgroud from the captured image.
 	**/
-	void Scrub() {
+	void Scrub(WebCamTexture texture) {
+
+		WebCamTexture tex = texture;
 		//create array and get the pixels
-		Color[] pix = GetPixels();
+		Color[] pix = tex.GetPixels();
 		int n = 0;
+
 		//iterate over the array
 		while (n < pix.Length)
 		{
-			double y = 0;
-			//grayscale formula
-			y = (pix[n].r * 0.21) + (pix[n].g * 0.72) + (pix[n].b * 0.07);
-			//check if pixel is white
-			if (y < 128)
-			{
-				//set white values to clear
-				pix[n] = Color.clear;
-			}
-			//if not white change to black
-			else {
-				pix[n] = Color.black;			
-			}
+				double y = 0;
+				//grayscale formula
+			y = ((pix[n].r * 255) * 0.21) + ((pix[n].g * 255) * 0.72) + ((pix[n].b * 255) * 0.07);
+				//check if pixel is white
+				if (y < 128)
+				{
+					//set white values to clear
+					pix[n] = Color.clear;
+				}
+				//if not white change to black
+				else {
+					pix[n] = Color.black;
+				}
 			//add to n to move to next pixel
-			n++; 
-		}
-	}
+			n++;
+		} 
+	} 
 }
